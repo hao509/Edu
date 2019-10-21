@@ -20,3 +20,5 @@
 
 + application.yml全局配置文件在edu-controller的resources文件夹下
 + mybatis映射文件和mybatis配置文件在 edu-dao的resources文件夹下
+
+# 前端
