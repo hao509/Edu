@@ -1,9 +1,9 @@
 package com.yang.edu.util.interceptor;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * @Author : MrYang
@@ -11,15 +11,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @Date : 2019-10-23
  **/
 @SpringBootConfiguration
-public class MyWebAppConfigurer extends WebMvcConfigurerAdapter {
-    @Bean
-    LoginInterceptor localInterceptor() {
-        return new LoginInterceptor();
-    }
+public class MyWebAppConfigurer implements WebMvcConfigurer {
+    /*@Autowired
+    private LoginInterceptor loginInterceptor;*/
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(localInterceptor())
+        registry.addInterceptor(new LoginInterceptor())
                 .addPathPatterns("/**")
                 .excludePathPatterns("/login");
         //excludePathPatterns()  过滤的请求url
