@@ -3,6 +3,8 @@ server:
   port: 8088
   servlet:
     context-path: /edu
+    session:
+      timeout: 1800     #session有效时间  30分钟
 
 #######################################################################
 spring:
