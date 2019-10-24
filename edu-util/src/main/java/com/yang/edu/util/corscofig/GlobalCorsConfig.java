@@ -1,4 +1,4 @@
-package com.yang.edu.util;
+package com.yang.edu.util.corscofig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
