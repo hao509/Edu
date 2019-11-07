@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Edu后台管理系统</title>
+    <link rel="stylesheet" th:href="@{/static/easyUI/themes/default/easyui.css}" />
+    <link rel="stylesheet" th:href="@{/static/easyUI/themes/icon.css}" />
+    <link rel="stylesheet" th:href="@{/static/css/home.css}" />
+    <script th:src="@{/static/js/jquery-3.3.1.js}"></script>
+    <script th:src="@{/static/easyUI/jquery.easyui.min.js}"></script>
+    <script th:src="@{/static/easyUI/locale/easyui-lang-zh_CN.js}"></script>
+    <script th:src="@{/static/js/home.js}"></script>
+</head>
+<body class="easyui-layout">
+    <!-- 顶部导航 -->
+    <div class="index_header" data-options="region:'north',border:false,split:true">
+        <div class="index_header_left">
+            <span style="font-size:26px;font-family:'YouYuan'"><strong>Welcome Use 后台管理系统</strong></span>
+        </div>
+        <div class="headerImg">
+            <img th:src="@{/static/image/homeImg/headerImg.png}"></img>
+        </div>
+        <div class="index_header_manage">
+            <p><strong th:text="${name}">tom</strong></p>
+        </div>
+        <div class="index_header_right">
+            <p>
+                <a href="javascript:void(0)" id="adminExit" onclick="adminExit()">
+                    <img th:src="@{/static/image/homeImg/shutdown1.png}" title="退出"></img>
+                </a>
+            </p>
+        </div>
+    </div><!-- 顶部 End -->
+
+    <!-- 左侧导航菜单 -->
+    <div class="index-sidebar easyui-accordion" data-options="region:'west',split:true,border:true,title:'导航菜单'">
+        <div title="快捷菜单" data-options="iconCls:'icon-application-cascade'" style="padding:5px;">
+            <ul class="easyui-tree linkheader">
+                <li iconCls="icon-chart-organisation"><a href="javascript:void(0)"  data-icon="icon-chart-organisation" data-link="addBannerimgPage" iframe="0">首页轮播图</a></li>
+                <li iconCls="icon-image-edit"><a href="javascript:void(0)" id="index" data-icon="icon-image-edit" data-link="manageBannerimg" iframe="0">轮播图管理</a></li>
+            </ul>
+        </div>
+        <div title="学生管理" data-options="iconCls:'icon-application-cascade'" style="padding:5px;">
+            <ul class="easyui-tree linkheader">
+                <li iconCls="icon-menu-info-student"><a href="javascript:void(0)" data-icon="icon-menu-info-student" data-link="studentInfo" iframe="0">学生信息</a></li>
+            </ul>
+        </div>
+        <div title="教师管理" data-options="iconCls:'icon-application-cascade'" style="padding:5px;">
+            <ul class="easyui-tree linkheader">
+                <li iconCls="icon-menu-add-teacher"><a href="javascript:void(0)" data-icon="icon-menu-add-teacher" data-link="teacherAdd" iframe="0">添加教师</a></li>
+                <li iconCls="icon-menu-edit-teacher"><a href="javascript:void(0)" data-icon="icon-menu-edit-teacher" data-link="teacherinfo" iframe="0">信息修改</a></li>
+            </ul>
+        </div>
+        <div title="新闻中心" data-options="iconCls:'icon-application-cascade'" style="padding:5px;">
+            <ul class="easyui-tree linkheader">
+                <li iconCls="icon-menu-news-add"><a href="javascript:void(0)" data-icon="icon-menu-news-add" data-link="addNews" iframe="0">添加新闻</a></li>
+                <li iconCls="icon-menu-news-edit"><a href="javascript:void(0)" data-icon="icon-menu-news-edit" data-link="editNews" iframe="0">新闻修改</a></li>
+            </ul>
+        </div>
+    </div><!-- 左侧 End -->
+
+    <!-- 右侧(center)页面显示 -->
+    <div class="index-main" data-options="region:'center'">
+        <div id="index-tabs" class="easyui-tabs" data-options="border:false,fit:true" >
+            <div title="首页" data-options="closable:false,iconCls:'icon-tip',cls:'pd3'">
+                <iframe scrolling="auto" frameborder="0"  th:src="welcomePage" style="width:100%;height:100%;"></iframe>
+            </div>
+        </div>
+    </div><!-- 右侧 End -->
+
+    <div class="index-footer" data-options="region:'south',border:true,split:true">
+        &copy; 2018 My All Rights Reserved
+    </div>
+
+
+</body>
+</html>

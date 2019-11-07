@@ -1,0 +1,196 @@
+#index_main{
+    width:1400px;
+    height:auto;
+    margin: auto;
+}
+#top_box{
+    width:100%;
+    height:500px;
+    position: relative;
+}
+#banner_img{
+    width:100%;
+    height:100%;
+}
+#head_nav{
+    width: 100%;
+    height:50px;
+    z-index: 9999;
+    background-color:rgba(82,166,207,0.3);
+    opacity: 0.3;
+    color:black;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.indexCenter{
+    margin-top:20px;
+    width:1400px;
+    height:475px;
+    margin-bottom:30px;
+}
+
+.indexCenter .left{
+    width:560px;
+    height:475px;
+    float:left;
+}
+.left .leftTop{
+    background-image:url(http://localhost:8066/edu/static/image/indexImg/one.png);
+    width:560px;
+    height:240px;
+}
+.welcomeStudent{
+    padding-top:70px;
+    margin-left:50px;
+    float:left;
+    width:280px;
+    height:100px;
+    color:#ffffff;
+    font-size:24px;
+    line-height:35px;
+}
+.studentReg{
+    width:120px;
+    height:50px;
+    float:left;
+    margin-top:100px;
+    margin-left:30px;
+}
+.studentReg a{
+    text-decoration:none;
+    color:#d75c00;
+    font-size:25px;
+    font-weight:bold;
+}
+.studentReg a span{
+    display:block;
+    text-align:center;
+    width:120px;
+    height:50px;
+    line-height:50px;
+    background-color:#ffde00;
+}
+.leftBottom{
+    margin-top:15px;
+    background-image:url("http://localhost:8066/edu/static/image/indexImg/two.png");
+    width:560px;
+    height:220px;
+}
+.leftBottom .entranceGuide{
+    margin-top:10px;
+    margin:auto;
+    width:500px;
+    color:#ffffff;
+    font-size:24px;
+    height:38px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #FFFFFF;
+}
+.guideLink{
+    width:500px;
+    height:155px;
+    margin-left:30px;
+    margin-top:2px;
+    color:#ffffff;
+    font-size:18px;
+}
+
+.guideLink tr{
+    height:45px;
+}
+.guideLink a{
+    text-decoration:none;
+    color:#ffffff;
+}
+
+.right{
+    float:left;
+    margin-left:40px;
+    background-color:#0e86c0;
+    width:800px;
+    height:415px;
+}
+.newStudentInfo{
+    width:780px;
+    height:210px;
+    margin:auto;
+}
+.titleHead{
+    width:100%;
+    height:34px;
+    margin-top:20px;
+    margin-bottom:10px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #FFFFFF;
+}
+
+.newstuRead,.schoolArticle{
+    width:715px;
+    height:28px;
+    float:left;
+    color:#fff;
+    font-size:24px;
+    padding-left:5px;
+}
+
+.more{
+    width:60px;
+    height:28px;
+    float:left;
+    font-size:12px;
+
+}
+.more a{
+    text-decoration:none;
+    color:#ffffff;
+}
+.newsStuContent,.schoolContent{
+    width:100%;
+    heigth:150px;
+    font-size:14px;
+}
+.newsStuContent ul li{
+    width:700px;
+    heigth:24px;
+    line-height:24px;
+    list-style-type:disc;
+    list-style-position:inside;
+    color:#ffffff;
+}
+.newsStuContent a{
+    color:#ffffff;
+    text-decoration:none;
+}
+.title{
+    width:690px;
+    height:24px;
+}
+.time{
+    width:90px;
+    heigth:24px;
+    float:right;
+}
+
+.schoolNews{
+    width:780px;
+    height:215px;
+    margin:auto;
+}
+
+.schoolContent ul li{
+    width:700px;
+    heigth:24px;
+    line-height:24px;
+    list-style-type:disc;
+    list-style-position:inside;
+    color:#ffffff;
+}
+.schoolContent a{
+    color:#ffffff;
+    text-decoration:none;
+}

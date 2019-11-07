@@ -23,4 +23,9 @@ public class UserServiceImpl implements UserService {
     public void save(UserEntity user) {
         userMapper.save(user);
     }
+
+    @Override
+    public UserEntity getUserEntityByName(String userName) {
+        return null;
+    }
 }

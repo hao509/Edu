@@ -1,6 +1,6 @@
 #######################################################################
 server:
-  port: 8088
+  port: 8066
   servlet:
     context-path: /edu
     session:
@@ -19,6 +19,17 @@ spring:
       initial-size: 10                    # 初始化提供的连接数
       max-total: 10                       # 最大的连接数
       max-wait-millis: 200                # 等待连接获取的最大超时时间
+  mvc:
+    static-path-pattern: /**
+  devtools:
+    restart:
+      enabled: true
+  # 配置静态资源文件路径
+  resources:
+    static-locations: classpath:/
+  thymeleaf:
+    cache: false
+
 
 #######################################################################
 mybatis:

@@ -20,11 +20,6 @@
             <artifactId>edu-entity</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.yang</groupId>
-            <artifactId>edu-util</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <!-- 外部依赖 -->
         <!-- mybatis的依赖 -->
         <dependency>

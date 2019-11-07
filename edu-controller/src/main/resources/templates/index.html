@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<link th:href="@{/static/css/index.css}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" th:href="@{/static/bootstrap-3.3.7/css/bootstrap.min.css}">
+<head>
+    <title>Edu学院迎新网</title>
+</head>
+<body style="background-color: #f2f2f2;">
+<div id="index_main">
+    <div id="top_box">
+        <div id="banner_img">
+
+            <div id="edu" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#edu" data-slide-to="0" class="active"></li>
+                    <li data-target="#edu" data-slide-to="1"></li>
+                    <li data-target="#edu" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img th:src="@{/static/image/indexImg/bannerOne.jpg}" src="" alt="...">
+                        <div class="carousel-caption">
+                            图书馆
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img th:src="@{/static/image/indexImg/schoolMotto.jpg}" src="" alt="...">
+                        <div class="carousel-caption">
+                            马坡校区
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img th:src="@{/static/image/indexImg/mapo.png}" src="" alt="...">
+                        <div class="carousel-caption">
+                            东湖操场
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#edu" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#edu" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div id="head_nav">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">EDU学院</a>
+                    </div>
+                    <div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">首页</a></li>
+                            <li><a href="#">自助报到</a></li>
+                            <li><a href="#">学院新闻</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="indexCenter">
+        <div class="left">
+            <div class="leftTop">
+                <div class="welcomeStudent">
+                    <p>欢迎2019级新生</p>
+                    <p>加入生物机电职院！</p>
+                    <p>8月25日开放</p>
+                </div>
+                <div class="studentReg">
+                    <a href="login" target="_blank"><span>自助报到</span> </a>
+                </div>
+            </div>
+            <!-- leftTop End -->
+
+            <div class="leftBottom">
+                <div class="entranceGuide">
+                    <p>入学攻略</p>
+                </div>
+                <div class="guideLink">
+                    <table width="500" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="28" valign="middle">
+                                <img th:src="@{/static/image/indexImg/icon.jpg}" />
+                            </td>
+                            <td width="217" valign="middle"><a href="news/showInfoToDeatils?id=24" target="_blank">数字迎新平台操作须知</a>
+                            </td>
+                            <td width="28" valign="middle">
+                                <img th:src="@{/static/image/indexImg/icon1.jpg}" />
+                            </td>
+                            <td width="217" valign="middle">
+                                <a href="news/showInfoToDeatils?id=23" target="_blank">交通路线</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle">
+                                <img th:src="@{/static/image/indexImg/icon2.jpg}" />
+                            </td>
+                            <td valign="middle">
+                                <a href="news/showInfoToDeatils?id=25" target="_blank">入学指南</a>
+                            </td>
+                            <td valign="middle">
+                                <img th:src="@{/static/image/indexImg/icon3.jpg}" />
+                            </td>
+                            <td valign="middle">
+                                <a href="Map" target="_blank">校园地图</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle">
+                                <img th:src="@{/static/image/indexImg/icon4.jpg}" />
+                            </td>
+                            <td valign="middle">
+                                <a href="#" target="_blank">常用电话</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- leftBottom End -->
+        </div>
+        <!--left End-->
+
+        <div class="right">
+            <div class="newStudentInfo">
+                <div class="titleHead">
+                    <div class="newstuRead">新生导读</div>
+                    <div class="more">
+                        <a href="stuNews" target="_blank">更多<span>+</span></a>
+                    </div>
+                </div>
+                <div class="newsStuContent">
+                    <ul id="newsStudentLink">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="schoolNews">
+                <div class="titleHead">
+                    <div class="schoolArticle">学院新闻</div>
+                    <div class="more">
+                        <a href="#" target="_blank">更多<span>+</span></a>
+                    </div>
+                </div>
+                <div class="schoolContent">
+                    <ul id="newsSchoolLink">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--right End-->
+    </div>
+    <!--indexCenter End-->
+</div>
+</body>
+<script th:src="@{/static/js/jquery-3.3.1.js}"></script>
+<script th:src="@{/static/bootstrap-3.3.7/js/bootstrap.min.js}"></script>
+<script th:src="@{/static/js/index.js}"></script>
+</html>
