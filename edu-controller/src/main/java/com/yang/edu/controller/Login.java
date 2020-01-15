@@ -1,55 +1,90 @@
-/*
 package com.yang.edu.controller;
 
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.IncorrectCredentialsException;
-import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.subject.Subject;
+import com.yang.edu.entity.Student;
+import com.yang.edu.service.StudentService;
+import com.yang.edu.service.SysMenuService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 
 @Controller
 public class Login {
 
-    */
-/**
+    @Autowired
+    private StudentService studentService;
+    @Autowired
+    private SysMenuService sysMenuService;
+
+    @RequestMapping(value = "/welcome",method = RequestMethod.GET)
+    public String loginPage(){
+        return "welcome";
+    }
+    @RequestMapping(value = "/login",method = RequestMethod.GET)
+    public String stuLoginPage(){
+        return "login";
+    }
+
+    @RequestMapping(value = "/logout")
+    public void loginout(HttpSession session,HttpServletResponse response) throws IOException {
+        //清除session
+        session.invalidate();
+        //退出后重新返回到登录选择界面
+        response.sendRedirect("/edu/login");
+    }
+
+
+    /**
      * 登录逻辑处理
      * @return
-     *//*
+     */
 
-    @RequestMapping("/login")
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ResponseBody
-    public boolean login(String name, String password, HttpServletRequest request, HttpServletResponse response){
-        */
-/**
-         * 使用shiro编写认证操作
-         *//*
+    public Map login( HttpServletRequest request, HttpServletResponse response){
+        String userName = request.getParameter("userName");
+        String userPassword  = request.getParameter("userPassword");
+        //0-管理员   1-教职工   2-学生
+        String flag = request.getParameter("flag");
 
-        //获取subject
-        Subject subject = SecurityUtils.getSubject();
-        //封装用户数据
-        UsernamePasswordToken token = new UsernamePasswordToken(name,password);
-        //执行登录方法
-        try {
-            subject.login(token);
-            response.setStatus(200);
-        } catch (UnknownAccountException e) {
-            //e.printStackTrace();
-            //登录失败：用户名不存在
-        }catch (IncorrectCredentialsException e) {
-            //e.printStackTrace();
-            //登录失败：密码错误
+        Map<String,String> message = new HashMap<>();
+
+        if("2".equals(flag)){
+            Student student = new Student();
+            student = studentService.getStudent(userName);
+            if(student==null){
+                message.put("content","用户不存在");
+                message.put("status","0");
+                return message;
+            }else if(userPassword.equals(student.getStudentPassword())){
+                HttpSession session = request.getSession();
+                //将成功登录的用户信息注入到session中
+                session.setAttribute("user_session_key", student);
+
+                message.put("content","登录成功");
+                message.put("status","1");
+                message.put("user","2");
+                return message;
+            }else{
+                message.put("content","密码错误");
+                message.put("status","0");
+                message.put("user","2");
+                return message;
+            }
+        }else if ("1".equals(flag)){
+            return message;
+        }else {
+            return message;
         }
-        System.out.println("ok");
-        return true;
     }
 }
-*/
+
