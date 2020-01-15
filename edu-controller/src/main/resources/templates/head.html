@@ -1,0 +1,27 @@
+<div th:fragment="head">
+    <div class="header" >
+        <div class="headSchoolLogo">
+            <div class="logoImg">
+                <img th:src="@{/static/image/head/edu_logo.png}" />
+            </div>
+            <div class="nameSuffix">
+                <span style="font-weight:bold;">·</span>&nbsp;数字迎新网
+            </div>
+        </div>
+        <div class="linkHeader">
+            <div class="navigationBar">
+                <ul>
+                    <li><a th:href="@{/}">首页</a></li>
+                    <li><a th:href="@{/login}" target="_blank">自助报到</a></li>
+                    <li><a th:href="@{/news}" target="_blank">新生导读</a></li>
+                    <li><a th:href="@{/details(id=21)}" target="_blank">志愿者须知</a></li>
+                    <li><a th:href="@{/}" target="_blank">印象<span style="font-weight:bold;">·</span>大生机</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="schoolIndex">
+                <a th:href="@{/}"><span>学校主页</span> </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+<div th:fragment="foot">
+    <!--foot Begin-->
+    <div class="footer">
+        <div class="footTop" >
+            <div class="friendLinks">
+                <ul>
+                    <li class="linkKind">关于迎新</li>
+                    <li><a th:href="index.jsp" target="_top">迎新首页</a>
+                    </li>
+                    <li><a th:href="@{/}" target="_top">学院风光</a>
+                    </li>
+                    <li><a th:href="@{/}" target="_top">虚拟校园</a>
+                    </li>
+                    <li><a th:href="@{/}" target="_top">学院新闻</a>
+                    </li>
+                </ul>
+            </div>
+            <!--friendLinks END-->
+
+            <div class="friendLinks">
+                <ul>
+                    <li class="linkKind">了解学校</li>
+                    <li><a th:href="@{/}" target="_top">学院首页</a>
+                    </li>
+                    <li><a th:href="@{/}" target="_top">学院风光</a>
+                    </li>
+                    <li><a th:href="@{/}" target="_top">虚拟校园</a>
+                    </li>
+                    <li><a th:href="@{/}" target="_top">学院新闻</a>
+                    </li>
+                </ul>
+            </div>
+            <!--friendLinks END-->
+
+            <div class="footCenter">
+                <div class="schoolLogo">
+                    <img th:src="@{/static/image/foot/blue.png}" style="float:left;" />
+                    <img th:src="@{/static/image/foot/logo.png}" width="67" height="67" style="float:left;margin-top:10px;" />
+                </div>
+                <div class="schoolMotto">
+                    <img th:src="@{/static/image/foot/hbbemc-footer-icon03.png}" />
+                </div>
+            </div>
+            <!--footCenter END-->
+
+            <div class="others">
+                <div class="othersTop">
+                    <div class="weixinLogo" style="margin-left:80px;">
+                        <img th:src="@{/static/image/foot/hbepWeiXin.png}" />
+                        <p>官方微信</p>
+                    </div>
+                    <div class="weixinLogo">
+                        <img th:src="@{/static/image/foot/hbbemc-ewm02.png}" />
+                        <p>湖南教育财政</p>
+                    </div>
+                </div>
+                <div class="othersBottom">
+                    <div class="phone">
+                        <p>招生电话：0731-84x12s3</p>
+                        <p>邮编：410127</p>
+                    </div>
+                </div>
+            </div>
+            <!--others END-->
+        </div>
+        <!--footTop END-->
+
+        <div class="footBottom">
+            <p>Edu学院©版权所有&nbsp;&nbsp;地址:湖南省长沙市岳麓区</p>
+            <p>湘ICP备05xxx859号 湘教QS3-20xx5-0x0x47</p>
+        </div>
+
+    </div>
+    <!--foot END-->
+</div>

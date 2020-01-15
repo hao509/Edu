@@ -1,0 +1,56 @@
+*{margin:0px;padding:0px;list-style:none;}
+body{background-color:#f2f2f2;}
+
+/*--------------------*/
+
+.main{
+    margin:auto;
+    width:1400px;
+    height:auto;
+}
+/*-------------------------*/
+.center{
+    width:100%;
+    min-height:410px;
+    height:auto;
+    margin:5px 0px;
+}
+
+/* 当前位置显示 */
+.pagePosition{
+    width:100%;
+    height:30px;
+    line-height:30px;
+    font-size:14px;
+    border-bottom:3px solid #1188c2;
+}
+.pagePosition a{
+    text-decoration:none;
+    color:#444444;
+}
+.pagePosition a:hover{
+    color:blue;
+}
+.articleHeader{
+    width:90%;
+    height:70px;
+    margin:auto;
+    text-align:center;
+}
+.articleHeader #title{
+    display:block;
+    margin:10px 0px;
+    font-size:24px;
+    font-family:'YouYuan';
+    font-weight:bold;
+}
+.other{
+    padding-right:10px;
+}
+.articleContent{
+    width:90%;
+    height:auto;
+    margin:auto;
+    margin-top:40px;
+    margin-bottom:30px;
+}

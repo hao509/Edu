@@ -1,0 +1,75 @@
+*{margin:0px;padding:0px;list-style:none}
+
+.header{
+	margin:auto;
+	width:1400px;
+	height:180px;
+	background-color:rgba(82,166,207,1);
+}
+.headSchoolLogo{
+	width:100%;
+	height:140px;
+}
+.logoImg{
+	width:350px;
+	height:140px;
+	text-align: center;
+	line-height: 140px;
+	float:left;
+}
+.logoImg img{
+	width:300px;
+	height:100px;
+}
+.nameSuffix{
+	float:left;
+	width:767px;
+	height:140px;
+	line-height:140px;
+	color:#ffffff;
+	font-size:30px;
+}
+
+.linkHeader{
+	width:100%;
+	height:40px;
+	line-height:40px;
+}
+.navigationBar{
+	width:560px;
+	height:40px;
+	float:left;
+}
+.navigationBar ul li{
+	float:left;
+	margin:0px 15px;
+}
+.navigationBar ul li a{
+	text-decoration:none;
+	color:#FFF;
+	font-size:20px;
+}
+.navigationBar ul li a:hover{
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFF;	
+}
+.schoolIndex{
+	width:840px;
+	height:40px;
+	float:left;
+}
+.schoolIndex a{
+	text-decoration:none;
+	color:#FFF;
+}
+.schoolIndex span{
+	float:right;
+	width:110px;
+	height:30px;
+	line-height:30px;
+	display:block;
+	margin-right:20px;
+	border:solid 2px #fff;
+	text-align:center;
+}

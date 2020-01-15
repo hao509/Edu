@@ -14,11 +14,8 @@
 }
 #head_nav{
     width: 100%;
-    height:50px;
+    height:auto;
     z-index: 9999;
-    background-color:rgba(82,166,207,0.3);
-    opacity: 0.3;
-    color:black;
     font-weight: bold;
     position: absolute;
     top: 0px;
@@ -38,7 +35,7 @@
     float:left;
 }
 .left .leftTop{
-    background-image:url(http://localhost:8066/edu/static/image/indexImg/one.png);
+    background-image:url(../image/index/one.png);
     width:560px;
     height:240px;
 }
@@ -65,6 +62,12 @@
     font-size:25px;
     font-weight:bold;
 }
+.studentReg a:hover{
+    text-decoration:none;
+    font-size:25px;
+    color:green;
+    font-weight:bold;
+}
 .studentReg a span{
     display:block;
     text-align:center;
@@ -75,7 +78,7 @@
 }
 .leftBottom{
     margin-top:15px;
-    background-image:url("http://localhost:8066/edu/static/image/indexImg/two.png");
+    background-image:url(../image/index/two.png);
     width:560px;
     height:220px;
 }

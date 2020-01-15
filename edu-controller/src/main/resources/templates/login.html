@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>登录</title>
+    <link rel="stylesheet" th:href="@{/static/css/login.css}" type="text/css" />
+</head>
+
+<body>
+<div class="main">
+
+    <!-- 顶部 -->
+    <div class="top">
+        <div style="width: 25%;height:100%;margin: auto;">
+            <div class="schoolLogo">
+                <img th:src="@{/static/image/login/edu_logo.png}" />
+            </div>
+            <div class="information">
+                <span style="font-weight:bold;">·</span>&nbsp;身份认证
+            </div>
+        </div>
+    </div><!-- 顶部 End -->
+
+    <!-- 中间 -->
+    <div class="center">
+        <div class="userInput">
+            <div class="showInfo">
+                <img th:src="@{/static/image/login/informationImg.png}" />
+            </div>
+
+            <div class="checkInput">
+                <div class="account">
+                        <input type="text" class="inputCss" id="userName" name="userName" placeholder="学号/职工编号"><br />
+                        <input type="password" class="inputCss" id="pwd" name="userPassword" placeholder="请输入密码"/><br />
+                        <p id="roleChoose">
+                            <input type="radio" class="adminFlag" name="adminFlag" value="0">管理员</input>
+                            <input type="radio" class="adminFlag" name="adminFlag" value="1">教职工</input>
+                            <input type="radio" class="adminFlag" name="adminFlag" value="2" checked>学生</input>
+                        </p>
+
+                        <a href="#" target="_blank" class="forgetPwd" style="outline:medium;">忘记密码?</a><br />
+                        <button id="loginBtn">登录</button>
+                        <!--<input type="button" id="btnSub" value="登录" class="ok">-->
+                </div>
+                <div class="prompt">
+                    温馨提示：登录账号为学工号、校园卡号、手机号、身份证号，
+                    初始密码为证件号后六位（如包含字母为大写），
+                    联系电话：012-12345678。
+                    <p>建议使用:
+                        <img th:src="@{/static/image/login/ie.png}" />IE6以上&nbsp;
+                        <img th:src="@{/static/image/login/firefox.png}" />火狐&nbsp;
+                        <img th:src="@{/static/image/login/google.png}" />谷歌
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div><!-- 中间 End -->
+
+
+    <div class="bottom">
+        <span>Edu&nbsp;&nbsp;版权所有@2019</span>
+    </div>
+
+</div><!-- main End -->
+</body>
+<script type="text/javascript" th:src="@{/static/js/jquery-3.3.1.js}"></script>
+<script type="text/javascript" th:src="@{/static/js/login.js}"></script>
+</html>

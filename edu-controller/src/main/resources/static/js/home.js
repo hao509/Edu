@@ -9,10 +9,10 @@ $(function(){
 	});	
 	
 	$('.index_header_right p a').mouseover(function(){
-		$('.index_header_right p a img').attr('src','http://localhost:8066/edu/static/image/homeImg/shutdown2.png')
+		$('.index_header_right p a img').attr('src','/edu/static/image/home/shutdown2.png')
 	});
 	$('.index_header_right p a').mouseleave(function(){
-		$('.index_header_right p a img').attr('src','http://localhost:8066/edu/static/image/homeImg/shutdown1.png')
+		$('.index_header_right p a img').attr('src','/edu/static/image/home/shutdown1.png')
 	});
 	
 	
@@ -22,7 +22,7 @@ function adminExit(){
 	$.messager.confirm('退出登录', '您确定退出该系统吗？', function(r){
 		if (r){
 		    // 退出操作;
-			location.href="user/Out";
+			location.href="/edu/logout";
 		}else{
 			
 		}

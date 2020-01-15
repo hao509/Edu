@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <base href="<%=basePath%>">
+
+    <title>Edu学院-登录</title>
+
+    <link rel="stylesheet" th:href="@{/static/css/welcome.css}" type="text/css" />
+</head>
+
+<body>
+<div class="main">
+
+    <!-- 顶部 -->
+    <div class="top">
+        <div class="schoolLogo">
+            <img th:src="@{/static/image/welcome/nameLogo.png}" />
+        </div>
+        <div class="information">
+            <span style="font-weight:bold;">·</span>&nbsp;数字迎新网
+        </div>
+    </div><!-- 顶部 End -->
+
+    <!-- 中间 -->
+    <div class="center">
+        <div class="welcome">
+            W e l c o m e<br />
+            <span style="font-size:50px">生物机电学院欢迎你</span>
+        </div>
+
+        <div class="loginKind">
+            <!-- 教师管理员登录 -->
+            <div class="teacherLogin">
+                <a href="userLoginIndex">
+                    <img th:src="@{/static/image/welcome/teacher.png}" /><br />
+                    <span>教职工登录</span>
+                </a>
+            </div>
+
+            <!-- 学生登录 -->
+            <div class="studentLogin">
+                <a href="stuLoginIndex">
+                    <img th:src="@{/static/image/welcome/student.png}" /><br />
+                    <span>新生登录</span>
+                </a>
+            </div>
+        </div>
+    </div><!-- 中间 End -->
+
+
+    <div class="bottom">
+        <span>湖南生物机电&nbsp;&nbsp;版权所有@2018</span>
+    </div>
+
+</div><!-- main End -->
+</body>
+</html>

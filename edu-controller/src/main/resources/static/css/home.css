@@ -6,7 +6,7 @@
 	width:100%;
 	height:65px;
 	color:#ffffff;
-	background:url("http://localhost:8066/edu/static/image/homeImg/bg_header.jpg") bottom repeat-x;
+	background:url(../image/home/bg_header.jpg) bottom repeat-x;
 	position:relative;
 }
 
