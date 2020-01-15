@@ -29,6 +29,17 @@ spring:
     static-locations: classpath:/
   thymeleaf:
     cache: false
+  redis:  #redis配置
+    port: 6379
+    password: yang1997
+    host: 192.168.3.175
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 2
+        max-wait: 10000
+      shutdown-timeout: 2000
 
 
 #######################################################################
