@@ -1,4 +1,4 @@
-package com.yang.edu.dao;
+package com.yang.edu.service;
 
 import com.yang.edu.entity.SysUserRole;
 
@@ -7,8 +7,8 @@ import java.util.List;
 /**
  * @Author : MrYang
  * @Description :
- * @Date : 2019-11-21
+ * @Date : --
  **/
-public interface SysUserRoleMapper {
+public interface SysUserRoleService {
     List<SysUserRole> getRoleIdByUserId(String userId);
 }

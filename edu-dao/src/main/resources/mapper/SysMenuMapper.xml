@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yang.edu.dao.SysMenuMapper">
+    <resultMap id="SysMenuMap" type="com.yang.edu.entity.SysMenu">
+        <id column="id" jdbcType="VARCHAR" property="id" />
+        <result column="menuName" jdbcType="VARCHAR" property="menuName" />
+        <result column="menuUrl" jdbcType="VARCHAR" property="menuUrl" />
+        <result column="menuCode" jdbcType="VARCHAR" property="menuCode" />
+        <result column="parentId" jdbcType="VARCHAR" property="parentId" />
+        <result column="isParent" jdbcType="VARCHAR" property="isParent" />
+        <result column="menuGroup" jdbcType="VARCHAR" property="menuGroup" />
+        <result column="orderNum" jdbcType="INTEGER" property="orderNum" />
+        <result column="icon" jdbcType="VARCHAR" property="icon" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="updateTime" jdbcType="TIMESTAMP" property="updateTime" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    id,menuName, menuUrl,menuCode, parentId,isParent, menuGroup, orderNum, icon, status, createTime,
+    updateTime
+  </sql>
+    <insert id="save" parameterType="com.yang.edu.entity.SysMenu">
+        insert into sys_menu (id, menuName, menuUrl, parentId,menuCode, menuGroup,orderNum, icon, status,createTime, updateTime)
+        values (#{id,jdbcType=VARCHAR},#{menuName,jdbcType=VARCHAR},
+                #{menuUrl,jdbcType=VARCHAR}, #{parentId,jdbcType=VARCHAR},#{isParent,jdbcType=VARCHAR},#{menuCode,jdbcType=VARCHAR}, #{menuGroup,jdbcType=INTEGER},
+                #{orderNum,jdbcType=INTEGER}, #{icon,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER},
+                #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+    </insert>
+    <select id="getMenu" parameterType="java.lang.String" resultType="com.yang.edu.entity.SysMenu">
+        select
+        <include refid="Base_Column_List" />
+        from sys_menu order by orderNum
+    </select>
+    <select id="getMenuByMenuId" parameterType="java.lang.String" resultType="com.yang.edu.entity.SysMenu">
+        select
+        <include refid="Base_Column_List" />
+        from sys_menu where id=#{id}
+    </select>
+</mapper>

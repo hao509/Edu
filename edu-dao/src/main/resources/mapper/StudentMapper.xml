@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yang.edu.dao.StudentMapper">
+    <resultMap id="studentInfo" type="com.yang.edu.entity.Student">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="studentId" property="studentId" jdbcType="VARCHAR"/>
+        <result column="studentName" jdbcType="VARCHAR" property="studentName" />
+        <result column="studentType" jdbcType="INTEGER" property="studentType" />
+        <result column="studentProfession" jdbcType="VARCHAR" property="studentProfession" />
+        <result column="studentClass" jdbcType="VARCHAR" property="studentClass" />
+        <result column="studentRoom" jdbcType="VARCHAR" property="studentRoom" />
+        <result column="studentApartment" jdbcType="VARCHAR" property="studentApartment" />
+        <result column="studentSex" jdbcType="INTEGER" property="studentSex" />
+        <result column="studentCardId" jdbcType="VARCHAR" property="studentCardId" />
+        <result column="studentNation" jdbcType="INTEGER" property="studentNation" />
+        <result column="studentEntranceTime" jdbcType="VARCHAR" property="studentEntranceTime" />
+        <result column="studentState" jdbcType="INTEGER" property="studentState" />
+        <result column="studentTuitionState" jdbcType="INTEGER" property="studentTuitionState" />
+        <result column="studentPhone" jdbcType="VARCHAR" property="studentPhone" />
+        <result column="studentPassword" jdbcType="VARCHAR" property="studentPassword" />
+        <result column="studentImg" jdbcType="VARCHAR" property="studentImg" />
+        <result column="powerLevel" jdbcType="INTEGER" property="powerLevel" />
+        <result column="studentRemark" jdbcType="VARCHAR" property="studentRemark" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,studentId, studentName, studentType, studentProfession, studentClass, studentRoom,
+        studentApartment, studentSex, studentCardId, studentNation, studentEntranceTime,
+        studentState, studentTuitionState, studentPhone, studentPassword, studentImg, powerLevel,
+        studentRemark
+     </sql>
+
+    <select id="getStudentInfoById" parameterType="java.lang.String" resultType="com.yang.edu.entity.Student">
+        select
+        <include refid="Base_Column_List" />
+        from student
+    </select>
+    <select id="getStudent" parameterType="java.lang.String" resultType="com.yang.edu.entity.Student">
+        select
+        <include refid="Base_Column_List" />
+        from student
+        where studentId = #{studentId}
+    </select>
+
+</mapper>
