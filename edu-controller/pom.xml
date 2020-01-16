@@ -16,11 +16,11 @@
 
     <dependencies>
         <!-- 内部依赖 -->
-        <!--<dependency>
+        <dependency>
             <groupId>com.yang</groupId>
             <artifactId>edu-util</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>com.yang</groupId>
             <artifactId>edu-entity</artifactId>
