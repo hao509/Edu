@@ -2,13 +2,16 @@ $(function(){
     $("#loginBtn").click(function(){
         var userName = $.trim($("#userName").val());
         var pwd = $.trim($("#pwd").val());
-        var flag = $("#roleChoose input[name='adminFlag']:checked").val();;
-        console.log(userName,pwd,flag);
+        var checkNum = $.trim($("#checkNum").val());
+        var flag = $("#roleChoose input[name='adminFlag']:checked").val();
         if(userName==null||userName==""){
             alert("请输入用户名!");
             return false;
         }else if(pwd==null||pwd==""){
             alert("请输入密码!");
+            return false;
+        }else if(checkNum==null||pwd==""){
+            alert("请输入验证码!");
             return false;
         }else{
             $.ajax({
@@ -37,5 +40,42 @@ $(function(){
                 }
             })
         }
+    });
+
+
+    /**
+     * 获取验证码
+     */
+    $("#checkNumBtn").click(function(){
+        var verificationCode = "";
+        var userName = $.trim($("#userName").val());
+        if(userName==null||userName==""){
+            alert("请先输入用户名");
+            return;
+        }
+        var i = 60;
+        $("#checkNumBtn").attr("disabled","disabled");
+        var timer = setInterval(function () {
+            if(i==0){
+                clearInterval(timer);
+                $("#checkNumBtn").removeAttr("disabled");
+                $("#checkNumBtn").val("获取验证码");
+            }else{
+                $("#checkNumBtn").val(i+"秒");
+            }
+            if(i==30){
+                //模拟手机验证码
+                $("#checkNum").val(verificationCode);
+            }
+            i--;
+        }, 1000);
+        $.ajax({
+            url:"/edu/login/getCheckNum?user="+userName,
+            type:"get",
+            success:function (data) {
+                verificationCode = data;
+                //$("#checkNum").val(data);
+            }
+        });
     });
 });

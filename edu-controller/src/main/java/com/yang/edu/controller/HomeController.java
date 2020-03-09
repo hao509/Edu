@@ -59,19 +59,8 @@ public class HomeController {
                         //菜单信息
                         SysMenu menu = sysMenuService.getMenuByMenuId(menuId.getMenuId());
                         if(menu!=null){
-                            Map<String,String> map = new HashMap<String, String>();
-                            //菜单id
-                            map.put("menuId", menu.getId());
-                            //菜单Url
-                            map.put("menuUrl", menu.getMenuUrl());
-                            //菜单name
-                            map.put("menuName", menu.getMenuName());
-                            //菜单parentId
-                            map.put("parentId", menu.getParentId());
-                            //分组
-                            map.put("group", menu.getMenuName());
                             if("0".equals(menu.getIsParent())){
-                                menuList.add(map);
+                                menuList.add(returnMenu(menu));
                             }else{
                                 if(!groupList.contains(menu.getMenuGroup())){
                                     groupList.add(menu.getMenuGroup());
@@ -92,5 +81,21 @@ public class HomeController {
         request.setAttribute("menuGroup",groupList);
 
         return "home";
+    }
+
+
+    public Map<String,String> returnMenu(SysMenu menu){
+        Map<String,String> map = new HashMap<>();
+        //菜单id
+        map.put("menuId", menu.getId());
+        //菜单Url
+        map.put("menuUrl", menu.getMenuUrl());
+        //菜单name
+        map.put("menuName", menu.getMenuName());
+        //菜单parentId
+        map.put("parentId", menu.getParentId());
+        //分组
+        map.put("group", menu.getMenuName());
+        return map;
     }
 }

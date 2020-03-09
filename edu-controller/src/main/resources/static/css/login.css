@@ -75,7 +75,7 @@ input{
 /*输入*/
 .checkInput{
     width:378px;
-    height:380px;
+    height:450px;
     margin-top:50px;
     border:1px solid #dfdfdf;
     float:left;
@@ -83,7 +83,7 @@ input{
 }
 
 .account{
-    height:200px;
+    height:260px;
     margin:auto;
     margin-top:30px;
     width:350px;
@@ -91,10 +91,20 @@ input{
 .account .inputCss{
     margin-left:50px;
     width:250px;
-    height:35px;
+    height:35px;.
 }
-.account #userName{
+.account #userName {
     margin-bottom:15px;
+}
+#checkNum{
+    margin-top: 15px;
+    margin-left: 50px;
+    height:35px;
+    width:145px;
+}
+#checkNumBtn{
+    width: 100px;
+    height:38px;
 }
 
 .account #roleChoose{
@@ -103,6 +113,7 @@ input{
     line-height:30px;
     font-size: 12px;
     text-align: center;
+    margin-top:15px;
     margin: auto;
 }
 .adminFlag{
@@ -132,7 +143,7 @@ input{
     border:none;
 }
 .prompt{
-    height:100px;
+    height:120px;
     margin:auto;
     width:250px;
 

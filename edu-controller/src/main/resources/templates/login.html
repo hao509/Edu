@@ -31,6 +31,10 @@
                 <div class="account">
                         <input type="text" class="inputCss" id="userName" name="userName" placeholder="学号/职工编号"><br />
                         <input type="password" class="inputCss" id="pwd" name="userPassword" placeholder="请输入密码"/><br />
+                        <input type="text" id="checkNum" name="checkNum" placeholder="请输入验证码"/>
+                        <input type="button" id="checkNumBtn" th:value="获取验证码"/>
+                        <br />
+
                         <p id="roleChoose">
                             <input type="radio" class="adminFlag" name="adminFlag" value="0">管理员</input>
                             <input type="radio" class="adminFlag" name="adminFlag" value="1">教职工</input>

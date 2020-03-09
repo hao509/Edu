@@ -14,7 +14,6 @@ public class IndexController {
     @RequestMapping("")
     public String test(ModelMap model){
         model.put("name","yang");
-        System.out.println("进来了");
         return "index";
     }
 }

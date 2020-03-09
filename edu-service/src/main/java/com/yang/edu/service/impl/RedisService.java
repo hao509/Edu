@@ -14,7 +14,6 @@ import java.util.concurrent.TimeUnit;
  * @Date: 2020/1/15 14:46
  * @Description: 缓存操作提供类
  */
-
 @Service
 public class RedisService {
     @Autowired
@@ -43,14 +42,15 @@ public class RedisService {
      *
      * @param key
      * @param value
+     * @param  type
      * @return
      */
-    public boolean set(final String key, Object value, Long expireTime) {
+    public boolean set(final String key, Object value, Long expireTime,TimeUnit type) {
         boolean result = false;
         try {
             ValueOperations<Serializable, Object> operations = redisTemplate.opsForValue();
             operations.set(key, value);
-            redisTemplate.expire(key, expireTime, TimeUnit.SECONDS);
+            redisTemplate.expire(key, expireTime, type);
             result = true;
         } catch (Exception e) {
             e.printStackTrace();

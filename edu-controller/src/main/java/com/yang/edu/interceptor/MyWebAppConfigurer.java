@@ -1,9 +1,7 @@
 package com.yang.edu.interceptor;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
@@ -20,7 +18,8 @@ public class MyWebAppConfigurer implements WebMvcConfigurer {
         //拦截的路径
         //String [] interceptor = {"/user/**","/home","/teacher/**"};
         //路径白名单
-        String [] exInterceptor = {"","/","/static/**","/welcome","/login","/logout","/index","/head","/foot","/news","/news/detail/**","/map"};
+        String [] exInterceptor = {"","/","/static/**","/welcome","/login/**","/logout","/index","/addBannerimg",
+                "/testCode","/head","/foot","/news","/news/detail/**","/map","/login/getCheckNum/**"};
 
         registry.addInterceptor(new LoginInterceptor())
                 .addPathPatterns("/**")
